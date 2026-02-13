@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai PharProd Impex LLP - Premium Desiccants & Pharmaceutical Packaging Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e656d;
+            --primary-light: #2a8891;
+            --primary-dark: #164d54;
+            --accent: #f1f3ce;
+            --accent-dark: #e8eab8;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-600: #525252;
+            --gray-800: #262626;
+            --gray-900: #171717;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--white);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: var(--primary);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Header */
+        .top-info {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 0;
+            font-size: 0.9rem;
+        }
+
+        .top-info-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-img {
+            height: 60px;
+            max-width: 250px;
+            object-fit: contain;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            font-weight: 400;
+            margin-top: 0.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--gray-800);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 101, 109, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--gray-50);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--gray-800);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-top: 3px solid var(--primary);
+        }
+
+        .about-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(30, 101, 109, 0.12);
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .product-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .product-description {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-list {
+            list-style: none;
+        }
+
+        .product-list li {
+            padding: 0.6rem 0;
+            color: var(--gray-700);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .product-list li:last-child {
+            border-bottom: none;
+        }
+
+        .product-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Trust Section */
+        .trust {
+            background: var(--accent);
+            padding: 4rem 2rem;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .trust-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-dark);
+        }
+
+        .trust-item p {
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        /* Industries */
+        .industries {
+            background: var(--gray-50);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .industry-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--gray-800);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+
+        .industry-item:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .contact-info p {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .info-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary);
+        }
+
+        .info-content p {
+            margin: 0;
+            color: var(--gray-700);
+            font-size: 0.95rem;
+        }
+
+        /* Form */
+        .contact-form {
+            background: var(--gray-50);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: var(--white);
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 101, 109, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Smooth animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Info Bar -->
+    <div class="top-info">
+        <div class="top-info-content">
+            <div class="contact-item">
+                <span>📧</span>
+                <span>saipharprodimpex@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span>📞</span>
+                <span>+91-9148237977</span>
+            </div>
+            <div class="contact-item">
+                <span>⏰</span>
+                <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="logo.png" alt="Sai PharProd Impex LLP" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- Fallback text logo if image not found -->
+                <div style="display: none;">
+                    <div class="logo">Sai PharProd Impex LLP</div>
+                    <div class="logo-subtitle">Premium Desiccants & Pharmaceutical Packaging</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Get Quote</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium Desiccants & Pharmaceutical Packaging Solutions</h1>
+                <p>Professionals with over a decade of industry experience, SPPI stands as a leading supplier of premium desiccants, adsorbents, and pharmaceutical packaging solutions.</p>
+                <a href="#contact" class="cta-btn">Request a Quote</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Quality Assured</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Sai PharProd Impex LLP</h2>
+                <p class="section-subtitle">Your trusted partner in product protection and pharmaceutical packaging</p>
+            </div>
+
+            <div class="about-content">
+                <p class="about-intro">
+                    Protecting your products from moisture, humidity, and odour is our top priority. We provide strategic packaging solutions and specialized care to meet industry requirements with accuracy and excellence. You can trust our products with quality assurance and unmatched expertise in protecting the quality of your products.
+                </p>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Our Expertise</h3>
+                        <p>With over a decade of industry experience, we specialize in providing comprehensive moisture control and pharmaceutical packaging solutions to various industries across India.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to delivering premium quality products that protect your valuable products. Every solution is designed with precision and tested for reliability.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Our Promise</h3>
+                        <p>Strategic packaging solutions backed by specialized care, industry expertise, and a dedication to meeting your requirements with accuracy and excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🏆</div>
+                    <h3>Premium Quality</h3>
+                    <p>Every product meets stringent quality standards ensuring maximum protection and reliability for your applications.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🎯</div>
+                    <h3>Industry Expertise</h3>
+                    <p>Over 10 years of specialized experience serving pharmaceutical, food, electronics, and manufacturing sectors.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Efficient supply chain management ensuring timely delivery across India with complete order tracking.</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💼</div>
+                    <h3>Complete Solutions</h3>
+                    <p>One-stop destination for all your desiccant, adsorbent, and pharmaceutical packaging requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Product Range</h2>
+                <p class="section-subtitle">Comprehensive solutions for moisture control and pharmaceutical packaging needs</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Desiccants -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Desiccants & Adsorbents</h3>
+                    </div>
+                    <p class="product-description">Premium moisture and odour control solutions for protecting your products from environmental damage.</p>
+                    <ul class="product-list">
+                        <li>Silica Gel (Orange, Blue, White indicating)</li>
+                        <li>Molecular Sieves (3A, 4A, 5A, 13X)</li>
+                        <li>Activated Carbon for odour control</li>
+                        <li>Oxygen Absorbers</li>
+                        <li>Custom desiccant canisters for filling</li>
+                        <li>Various packaging sizes available</li>
+                    </ul>
+                </div>
+
+                <!-- HDPE/PET Bottles -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>HDPE & PET Bottles</h3>
+                    </div>
+                    <p class="product-description">FDA approved pharmaceutical-grade bottles for safe storage and dispensing of medicines and supplements.</p>
+                    <ul class="product-list">
+                        <li>HDPE Bottles (High-Density Polyethylene)</li>
+                        <li>PET Bottles (Polyethylene Terephthalate)</li>
+                        <li>LDPE Bottles (Low-Density Polyethylene)</li>
+                        <li>PP Bottles (Polypropylene)</li>
+                        <li>Multiple sizes: 15ml to 1000ml</li>
+                        <li>Amber and clear options available</li>
+                    </ul>
+                </div>
+
+                <!-- CRC & CT Caps -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Child Resistant & Tamper Evident Caps</h3>
+                    </div>
+                    <p class="product-description">Safety closures meeting international standards for pharmaceutical and nutraceutical packaging.</p>
+                    <ul class="product-list">
+                        <li>CRC (Child Resistant Closures)</li>
+                        <li>CT (Tamper Evident Caps)</li>
+                        <li>Euro Head Caps</li>
+                        <li>Screw caps with liner seals</li>
+                        <li>Multiple colors and sizes</li>
+                        <li>Compatible with standard bottles</li>
+                    </ul>
+                </div>
+
+                <!-- Oral Syringes -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Oral Syringes</h3>
+                    </div>
+                    <p class="product-description">Precision dosing syringes for accurate liquid medication administration in healthcare settings.</p>
+                    <ul class="product-list">
+                        <li>1ml to 100ml capacity range</li>
+                        <li>Clear graduated markings</li>
+                        <li>Medical grade plastic material</li>
+                        <li>Oral syringe adaptors available</li>
+                        <li>Sterile and non-sterile options</li>
+                        <li>Bulk packaging available</li>
+                    </ul>
+                </div>
+
+                <!-- Droppers & Measuring -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Droppers & Measuring Solutions</h3>
+                    </div>
+                    <p class="product-description">Precision dispensing accessories for accurate liquid measurement and administration.</p>
+                    <ul class="product-list">
+                        <li>Dropper bottles (glass and plastic)</li>
+                        <li>Euro Head caps with droppers</li>
+                        <li>Bulb droppers in various sizes</li>
+                        <li>Measuring cups with clear markings</li>
+                        <li>Calibrated dosing spoons</li>
+                        <li>Custom printing available</li>
+                    </ul>
+                </div>
+
+                <!-- Pharma Packaging -->
+                <div class="product-card fade-in">
+                    <div class="product-header">
+                        <h3>Complete Pharma Packaging</h3>
+                    </div>
+                    <p class="product-description">End-to-end pharmaceutical and medical packaging solutions tailored to your specific requirements.</p>
+                    <ul class="product-list">
+                        <li>Tablet and capsule bottles</li>
+                        <li>Syrup and suspension bottles</li>
+                        <li>Powder and granule containers</li>
+                        <li>Desiccant integrated packaging</li>
+                        <li>Custom labeling and printing</li>
+                        <li>Complete packaging consultation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries" id="industries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Trusted by leading companies across diverse sectors</p>
+            </div>
+
+            <div class="industries-grid">
+                <div class="industry-item">Pharmaceutical</div>
+                <div class="industry-item">Nutraceuticals</div>
+                <div class="industry-item">Healthcare & Medical</div>
+                <div class="industry-item">Food & Beverage</div>
+                <div class="industry-item">Electronics</div>
+                <div class="industry-item">Laboratories</div>
+                <div class="industry-item">Manufacturing</div>
+                <div class="industry-item">Packaging Industry</div>
+                <div class="industry-item">Agriculture</div>
+                <div class="industry-item">Cosmetics</div>
+                <div class="industry-item">Chemical Industry</div>
+                <div class="industry-item">Research Facilities</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Ready to protect your products? Contact us for a quote or consultation</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Have questions about our products or need a custom solution? Our team is here to help you find the perfect packaging and moisture control solution.</p>
+
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>saipharprodimpex@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+91-9148237977</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Address</h4>
+                            <p>#47, 2nd floor, 4th cross,
+                                <br>Kurubarahalli, Siddharthanagar,
+                                <br>Mysore-570011
+                                <br>Karnataka- India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <!-- FormSubmit Configuration -->
+                    <form action="https://formsubmit.co/saipharprodimpex@gmail.com" method="POST">
+                        
+                        <!-- FormSubmit Configuration Settings -->
+                        <input type="hidden" name="_subject" value="New Inquiry from SPPI Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <!-- Redirect after submission (optional) - remove if not needed -->
+                        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name *</label>
+                                <input type="text" id="company" name="company" required placeholder="Company name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+91-XXXXXXXXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product">Product Category</label>
+                            <select id="product" name="product">
+                                <option value="">Select product category</option>
+                                <option value="desiccants">Desiccants & Adsorbents</option>
+                                <option value="bottles">HDPE/PET Bottles</option>
+                                <option value="caps">CRC & CT Caps</option>
+                                <option value="syringes">Oral Syringes</option>
+                                <option value="droppers">Droppers & Measuring Solutions</option>
+                                <option value="packaging">Complete Pharma Packaging</option>
+                                <option value="other">Other / Multiple Products</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Requirements *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Please describe your requirements, quantities needed, and any specific specifications..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sai PharProd Impex LLP</h3>
+                <p>Your trusted partner for premium desiccants, adsorbents, and pharmaceutical packaging solutions.</p>
+                <p style="margin-top: 1rem;">Over a decade of excellence in protecting product integrity across industries.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Products</h3>
+                <ul>
+                    <li><a href="#products">Silica Gel</a></li>
+                    <li><a href="#products">Molecular Sieves</a></li>
+                    <li><a href="#products">Activated Carbon</a></li>
+                    <li><a href="#products">HDPE/PET Bottles</a></li>
+                    <li><a href="#products">Oral Syringes</a></li>
+                    <li><a href="#products">CRC & CT Caps</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 saipharprodimpex@gmail.com</li>
+                    <li>📞 +91-9148237977</li>
+                    <li>📍 #47, 2nd floor, 4th cross, Kurubarahalli, Siddharthanagar, Mysore-570011, Karnataka- India</li>
+                    <li>⏰ Mon-Sat: 9 AM - 6 PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sai PharProd Impex LLP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(element => {
+            fadeObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
