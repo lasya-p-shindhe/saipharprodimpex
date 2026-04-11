@@ -435,6 +435,28 @@
             transform: translateY(-2px);
         }
 
+        /* Certifications */
+
+        .certifications {
+            display: flex;
+            justify-content: center;   /* center horizontally */
+            align-items: center;       /* center vertically */
+            gap: 20px;                 /* space between images */
+            margin-top: 20px;
+        }
+
+        .cert-img {
+            width: 120px;              /* smaller size */
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Optional: hover effect */
+        .cert-img:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--white);
@@ -926,6 +948,22 @@
 
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <img src="map.png" alt="Sai PharProd Impex LLP" class="map-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Supplier Company Certifications</h2>
+            </div>
+
+            <div class="certifications">
+                <img src="images/iso9001.webp" alt="ISO" class="cert-img"
+                 onerror="this.style.display='none';">
+                <img src="images/gmp-logo.png" alt="GMP" class="cert-img"
+                 onerror="this.style.display='none';">
             </div>
         </div>
     </section>
